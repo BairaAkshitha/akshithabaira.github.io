@@ -7,612 +7,245 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root {
-      --bg: #0f172a;
-      --bg-soft: #111827;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #3b82f6;
-      --accent-soft: rgba(59,130,246,0.15);
-      --card: #020617;
-      --border: #1f2933;
-    }
-    body.light {
-      --bg: #f9fafb;
-      --bg-soft: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --accent-soft: rgba(37,99,235,0.08);
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
-
-    * {
-      box-sizing: border-box;
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
-    body {
-      margin: 0;
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background: radial-gradient(circle at top, #1d263b 0, var(--bg) 40%, #020617 100%);
-      color: var(--text);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px 16px 60px;
-    }
-
     /* NAVBAR */
-    .nav {
+    nav {
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 16px 40px;
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(to bottom, rgba(15,23,42,0.9), rgba(15,23,42,0.4));
-      border-bottom: 1px solid rgba(148,163,184,0.2);
-      margin: -20px -16px 24px;
-      padding: 10px 20px;
+      z-index: 100;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-    }
-    .nav-left {
-      display: flex;
       align-items: center;
-      gap: 8px;
-    }
-    .nav-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at top left,#3b82f6,#a855f7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 700;
-      font-size: 16px;
-    }
-    .nav-title {
-      font-weight: 600;
-      font-size: 15px;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 14px;
-    }
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      position: relative;
-      padding-bottom: 2px;
-      transition: color 0.2s;
-    }
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width 0.2s;
-    }
-    .nav-links a:hover {
-      color: var(--text);
-    }
-    .nav-links a.active::after {
-      width: 100%;
     }
 
-    /* TOGGLE */
-    .toggle-btn {
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.3);
-      padding: 6px 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(15,23,42,0.8);
-      color: var(--muted);
-      cursor: pointer;
-      font-size: 12px;
-    }
-    .toggle-btn i {
-      font-size: 14px;
-    }
-
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
-      gap: 32px;
-      align-items: center;
-      margin-top: 20px;
-    }
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
-      }
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-    .hero-title {
-      font-size: 34px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-    .hero-subtitle {
-      font-size: 16px;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-    .hero-badge {
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.3);
-      color: var(--muted);
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-    .btn {
-      border-radius: 999px;
-      border: none;
-      padding: 10px 18px;
-      font-size: 14px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
-    }
-    .btn-primary {
-      background: linear-gradient(to right,#3b82f6,#6366f1);
-      color: white;
-      box-shadow: 0 12px 30px rgba(37,99,235,0.35);
-    }
-    .btn-secondary {
-      background: rgba(15,23,42,0.6);
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--text);
-    }
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 32px rgba(15,23,42,0.45);
-    }
-
-    .hero-contact-line {
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .hero-contact-line a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top left, rgba(59,130,246,0.35), transparent 55%), var(--bg-soft);
-      border-radius: 24px;
-      border: 1px solid rgba(148,163,184,0.3);
-      padding: 20px 18px;
-      box-shadow: 0 20px 50px rgba(15,23,42,0.6);
-    }
-    .hero-name {
+    nav .logo {
       font-size: 20px;
       font-weight: 600;
-      margin-bottom: 4px;
+      color: #2a2a2a;
     }
-    .hero-role {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .hero-location {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-    .hero-socials {
+
+    nav ul {
+      list-style: none;
       display: flex;
-      gap: 10px;
-      margin-bottom: 16px;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
     }
-    .hero-socials a {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
+
+    nav ul li a {
       text-decoration: none;
-      transition: 0.2s;
-      background: rgba(15,23,42,0.6);
-    }
-    .hero-socials a:hover {
-      color: white;
-      border-color: var(--accent);
-      background: var(--accent-soft);
-    }
-    .hero-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-    .hero-chip {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.75);
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--muted);
+      color: #444;
+      font-size: 15px;
+      font-weight: 500;
     }
 
-    /* SECTIONS */
-    .section {
-      margin-top: 56px;
+    nav ul li a:hover {
+      color: #0066ff;
     }
-    .section-title {
-      font-size: 22px;
+
+    /* HERO SECTION */
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .section-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 18px;
+      margin: 6px;
+      display: inline-block;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 16px;
+    .btn-primary {
+      background: #0066ff;
+      color: white;
     }
-    @media (max-width: 750px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+
+    .btn-secondary {
+      border: 2px solid #0066ff;
+      color: #0066ff;
+    }
+
+    .social-icons a {
+      font-size: 28px;
+      margin: 12px;
+      color: #444;
+      transition: 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #0066ff;
+      transform: scale(1.1);
+    }
+
+    /* SECTION LAYOUT */
+    section {
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section:nth-child(even) {
+      background: #f5f5f5;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .card {
-      background: var(--bg-soft);
-      border-radius: 16px;
-      border: 1px solid rgba(148,163,184,0.25);
-      padding: 14px 14px 16px;
-    }
-    .card-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .card-tagline {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-      font-size: 11px;
-    }
-    .pill {
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--muted);
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid #eaeaea;
     }
 
-    .skills-list {
-      font-size: 13px;
-      line-height: 1.7;
-      color: var(--muted);
+    .card strong {
+      font-size: 18px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 12px;
-      color: var(--muted);
       text-align: center;
-      padding-top: 16px;
-      border-top: 1px solid rgba(148,163,184,0.3);
+      padding: 25px;
+      color: #777;
+      font-size: 14px;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
     }
+
   </style>
 </head>
 <body>
-  <div class="page">
-    <!-- NAVBAR -->
-    <nav class="nav">
-      <div class="nav-left">
-        <div class="nav-logo">A</div>
-        <div class="nav-title">Akshitha Baira</div>
-      </div>
-      <div class="nav-links">
-        <a href="#about" class="active">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certs">Certifications</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button class="toggle-btn" id="modeToggle">
-        <i class="fas fa-moon"></i><span>Dark</span>
-      </button>
-    </nav>
 
-    <!-- HERO -->
-    <section class="hero" id="about">
-      <div>
-        <div class="hero-tag">
-          <i class="fas fa-bolt"></i> AI & LLM Engineer
-        </div>
-        <h1 class="hero-title">
-          Building real-world AI systems with<br />Generative Models & RAG.
-        </h1>
-        <p class="hero-subtitle">
-          I’m a Master’s student in Artificial Intelligence (Yeshiva University, Dec 2025),
-          focused on Generative AI, Large Language Models, Retrieval-Augmented Generation (RAG),
-          and deep learning for medical and real-world applications.
-        </p>
+<nav>
+  <div class="logo">Akshitha Baira</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-        <div class="hero-badges">
-          <div class="hero-badge">Generative AI & LLMs</div>
-          <div class="hero-badge">RAG Systems</div>
-          <div class="hero-badge">Transformers</div>
-          <div class="hero-badge">Medical AI</div>
-        </div>
+<!-- HERO -->
+<div class="hero" id="about">
+  <h1>Hi, I’m Akshitha 👋</h1>
+  <p>AI Engineer specializing in Generative AI, LLMs, RAG Systems, and Deep Learning.</p>
 
-        <div class="hero-actions">
-          <a href="mailto:bairaakshitha@gmail.com" class="btn btn-primary">
-            📩 Email Me
-          </a>
-          <a href="https://drive.google.com/file/d/13blWf77vyRoy1UMnH7hhOqfZ1hISa6Bu/preview"
-             target="_blank" class="btn btn-secondary">
-            📄 View Resume
-          </a>
-        </div>
+  <a href="mailto:bairaakshitha@gmail.com" class="btn btn-primary">📩 Email Me</a>
+  <a href="https://drive.google.com/file/d/13blWf77vyRoy1UMnH7hhOqfZ1hISa6Bu/preview" target="_blank" class="btn btn-secondary">📄 View Resume</a>
 
-        <p class="hero-contact-line">
-          Based in <strong>New York, USA</strong> • Open to roles in <strong>AI Engineer, LLM Engineer, GenAI Engineer</strong>
-        </p>
-      </div>
-
-      <aside class="hero-card">
-        <div class="hero-name">Akshitha Baira</div>
-        <div class="hero-role">AI Engineer • Generative AI • LLMs • RAG</div>
-        <div class="hero-location">
-          <i class="fas fa-location-dot"></i> New York, USA<br>
-          <i class="fas fa-phone"></i> (+1) 203-901-7300<br>
-          <i class="fas fa-envelope"></i> bairaakshitha@gmail.com
-        </div>
-
-        <div class="hero-socials">
-          <a href="https://linkedin.com/in/akshitha-baira-48a11b345" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/akshithabaira" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://researchgate.net/profile/Akshitha-Baira" target="_blank"><i class="fab fa-researchgate"></i></a>
-        </div>
-
-        <div class="hero-chip-row">
-          <div class="hero-chip">Python</div>
-          <div class="hero-chip">PyTorch</div>
-          <div class="hero-chip">TensorFlow</div>
-          <div class="hero-chip">LangChain</div>
-          <div class="hero-chip">Hugging Face</div>
-          <div class="hero-chip">AWS</div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="section-title">Skills</div>
-      <div class="section-subtitle">
-        Tools and technologies I work with across AI, LLMs, and data.
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">Core AI & ML</div>
-          <div class="card-tagline">Modeling & Generative Systems</div>
-          <div class="skills-list">
-            <strong>AI/ML:</strong> Machine Learning, Deep Learning, Generative AI, LLMs, RAG, NLP<br>
-            <strong>Frameworks:</strong> PyTorch, TensorFlow, Scikit-Learn, Hugging Face, LangChain
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Engineering & Cloud</div>
-          <div class="card-tagline">Production-oriented development</div>
-          <div class="skills-list">
-            <strong>Programming:</strong> Python, SQL<br>
-            <strong>Tools:</strong> FastAPI, Docker, Git, MLflow (basic)<br>
-            <strong>Cloud & DBs:</strong> AWS (S3/EC2), MySQL, MongoDB
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="section-title">Projects</div>
-      <div class="section-subtitle">
-        A selection of projects demonstrating my work in generative AI, medical AI, and deep learning.
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">Extending DoseDiff for Head & Neck Radiotherapy</div>
-          <div class="card-tagline">Distance-aware diffusion for 3D dose prediction</div>
-          <p class="skills-list">
-            Proposed and implemented enhancements to the DoseDiff diffusion model using the OpenKBP dataset,
-            improving sampling efficiency and dose prediction consistency for radiotherapy planning.
-          </p>
-          <div class="pill-row">
-            <div class="pill">Diffusion Models</div>
-            <div class="pill">Medical Imaging</div>
-            <div class="pill">PyTorch</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Document Summarizer (Transformers + FastAPI)</div>
-          <div class="card-tagline">LLM-powered summarization pipeline</div>
-          <p class="skills-list">
-            Built a multi-document summarization system using Hugging Face transformers and FastAPI,
-            generating concise, domain-specific summaries with improved readability and coherence.
-          </p>
-          <div class="pill-row">
-            <div class="pill">Transformers</div>
-            <div class="pill">NLP</div>
-            <div class="pill">FastAPI</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Brain Tumor Segmentation (UNet)</div>
-          <div class="card-tagline">Semantic segmentation of MRI scans</div>
-          <p class="skills-list">
-            Applied UNet-based deep learning models for tumor segmentation in MRI scans,
-            supporting automated localization and clinical decision workflows.
-          </p>
-          <div class="pill-row">
-            <div class="pill">UNet</div>
-            <div class="pill">Computer Vision</div>
-            <div class="pill">Medical AI</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Canine VHS Prediction (CNN)</div>
-          <div class="card-tagline">Veterinary cardiac image analysis</div>
-          <p class="skills-list">
-            Built a CNN-based pipeline to predict vertebral heart size (VHS) in canine radiographs,
-            enabling early cardiac disorder detection and supporting veterinary diagnostics.
-          </p>
-          <div class="pill-row">
-            <div class="pill">CNN</div>
-            <div class="pill">Healthcare</div>
-            <div class="pill">Image Analysis</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="section" id="certs">
-      <div class="section-title">Certifications</div>
-      <div class="section-subtitle">
-        Ongoing learning in cloud, AI, and generative systems.
-      </div>
-      <div class="card">
-        <ul class="skills-list">
-          <li>Google Cloud — Generative AI Fundamentals</li>
-          <li>DeepLearning.AI + OpenAI — ChatGPT Prompt Engineering for Developers</li>
-          <li>Hugging Face — Transformers & NLP Badge</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="section-title">Contact</div>
-      <div class="section-subtitle">
-        I’m open to AI Engineer, LLM Engineer, and Generative AI roles and collaborations.
-      </div>
-      <div class="card">
-        <p class="skills-list">
-          📍 <strong>Location:</strong> New York, USA<br>
-          📧 <strong>Email:</strong> <a href="mailto:bairaakshitha@gmail.com" style="color: var(--accent); text-decoration:none;">bairaakshitha@gmail.com</a><br>
-          🔗 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/akshitha-baira-48a11b345" style="color: var(--accent); text-decoration:none;" target="_blank">akshitha-baira-48a11b345</a><br>
-          🧪 <strong>ResearchGate:</strong> <a href="https://researchgate.net/profile/Akshitha-Baira" style="color: var(--accent); text-decoration:none;" target="_blank">researchgate.net/profile/Akshitha-Baira</a><br>
-          💻 <strong>GitHub:</strong> <a href="https://github.com/akshithabaira" style="color: var(--accent); text-decoration:none;" target="_blank">github.com/akshithabaira</a>
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Akshitha Baira • AI & LLM Engineer
-    </footer>
+  <div class="social-icons">
+    <a href="https://linkedin.com/in/akshitha-baira-48a11b345" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/akshithabaira" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://researchgate.net/profile/Akshitha-Baira" target="_blank"><i class="fab fa-researchgate"></i></a>
   </div>
+</div>
 
-  <script>
-    // Dark/Light toggle
-    const toggleBtn = document.getElementById('modeToggle');
-    const body = document.body;
-    const savedMode = localStorage.getItem('theme');
-    if (savedMode === 'light') {
-      body.classList.add('light');
-      toggleBtn.querySelector('i').classList.replace('fa-moon','fa-sun');
-      toggleBtn.querySelector('span').textContent = 'Light';
-    }
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <p><strong>Programming:</strong> Python, SQL<br>
+    <strong>AI/ML:</strong> Machine Learning, Deep Learning, Generative AI, LLMs, RAG, NLP<br>
+    <strong>Frameworks:</strong> PyTorch, TensorFlow, Hugging Face, LangChain<br>
+    <strong>Tools:</strong> FastAPI, Docker, Git, MLflow (basic)<br>
+    <strong>Cloud & Databases:</strong> AWS (S3/EC2), MySQL, MongoDB</p>
+  </div>
+</section>
 
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('light');
-      const isLight = body.classList.contains('light');
-      toggleBtn.querySelector('i').classList.toggle('fa-moon', !isLight);
-      toggleBtn.querySelector('i').classList.toggle('fa-sun', isLight);
-      toggleBtn.querySelector('span').textContent = isLight ? 'Light' : 'Dark';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
 
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 120;
-        const height = sec.offsetHeight;
-        if (top >= offset && top < offset + height) {
-          current = sec.getAttribute('id');
-        }
-      });
-      navLinks.forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === '#' + current) {
-          a.classList.add('active');
-        }
-      });
-    });
+    <div class="card">
+      <strong>Extending DoseDiff for Radiotherapy</strong>
+      <p>3D medical diffusion model enhancement for dose prediction accuracy.</p>
+    </div>
 
-    // Year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="card">
+      <strong>Document Summarizer</strong>
+      <p>Transformer-based summarization & FastAPI-powered inference system.</p>
+    </div>
+
+    <div class="card">
+      <strong>Brain Tumor Segmentation</strong>
+      <p>UNet model for MRI-based tumor segmentation and medical workflow support.</p>
+    </div>
+
+    <div class="card">
+      <strong>Canine VHS Prediction</strong>
+      <p>CNN model predicting cardiology indicators from veterinary scans.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="card">
+    <ul>
+      <li>Google Cloud — Generative AI Fundamentals</li>
+      <li>DeepLearning.AI + OpenAI — Prompt Engineering</li>
+      <li>Hugging Face — NLP & Transformers Badge</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📍 New York, USA</p>
+  <p>📧 <a href="mailto:bairaakshitha@gmail.com">bairaakshitha@gmail.com</a></p>
+</section>
+
+<footer>
+  © 2025 | Made by Akshitha Baira
+</footer>
+
 </body>
 </html>
