@@ -6,345 +6,312 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body id="top">
+<body>
 
 <!-- SPLASH SCREEN -->
 <div id="splash">
   <h1 class="splash-name">AKSHITHA BAIRA</h1>
-  <p class="splash-title">AI Engineer • ML Engineer • Research Engineer</p>
+  <p class="splash-title">AI Engineer</p>
 </div>
 
 <!-- MAIN CONTENT -->
 <div id="content" class="hidden">
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="container navbar">
-      <div class="logo">Akshitha Baira</div>
-      <nav class="nav-links">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#resume">Resume</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container navbar">
+    <div class="logo">AKSHITHA BAIRA</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#work-experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
 
-  <main>
+      <!-- 🔹 Resume link in NAVBAR (your Drive link) -->
+      <a href="https://drive.google.com/file/d/1fxrEP1DpUbEnzXlh2QanDSJ1_9rveEtW/view?usp=drive_link" 
+         target="_blank">
+        📄 Resume
+      </a>
+    </nav>
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <h1 class="hero-title">
-          Hi, I'm <span class="name-highlight">Akshitha Baira</span> 👋
-        </h1>
+<main>
 
-        <p class="hero-subtitle">
-          AI Engineer · Machine Learning Engineer · Research Engineer
-        </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 class="hero-title">
+        Hi, I'm <span class="name-highlight">AKSHITHA BAIRA</span>
+      </h1>
 
-        <p class="grad-line">
-          🎓 M.S. Artificial Intelligence · Yeshiva University · Jan 2024 – Dec 2025
-        </p>
+      <p class="hero-subtitle">
+        🤖 AI Engineer · 🧪 Machine Learning Engineer · 🧬 Research Engineer
+      </p>
 
-        <p class="hero-summary">
-          I am an AI Engineer specializing in Generative AI, diffusion models, transformers, and
-          LLM-based systems. I build end-to-end machine learning pipelines using PyTorch, Hugging Face,
-          and FastAPI, with strong research experience in medical imaging and radiotherapy dose prediction.
-          I enjoy taking messy data and research ideas and turning them into reliable, production-ready
-          AI systems.
-        </p>
+      <p class="grad-line">
+        🎓 M.S. Artificial Intelligence · Yeshiva University · Jan 2024 – Dec 2025
+      </p>
 
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="#experience">
-            🔍 View Experience
-          </a>
-          <a class="btn btn-ghost" href="#projects">
-            🚀 Explore Projects
-          </a>
-        </div>
+      <p class="hero-summary">
+        I am an AI Engineer with a Master’s in Artificial Intelligence, specializing in Generative AI,
+        diffusion models, transformers, and LLM-based systems. I have experience building end-to-end
+        ML pipelines using PyTorch, Hugging Face, and FastAPI, with strong research experience in
+        medical imaging and radiotherapy dose prediction.
+      </p>
 
-        <div class="hero-contact">
-          <p>📍 New York, USA · 📞 (+1) 203-901-7300 · 📧
-            <a href="mailto:bairaakshitha@gmail.com">bairaakshitha@gmail.com</a>
-          </p>
-          <p>
-            🔗
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> ·
-            <a href="https://www.researchgate.net" target="_blank">ResearchGate</a>
-          </p>
-        </div>
-      </div>
-    </section>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#work-experience">
+          💼 View Experience
+        </a>
+        <a class="btn btn-ghost" href="#projects">
+          🚀 Explore Projects
+        </a>
 
-    <!-- EXPERIENCE (FIRST) -->
-    <section class="section" id="experience">
-      <div class="container">
-        <h2 class="section-title">💼 Work Experience</h2>
-
-        <div class="card-grid">
-          <div class="card">
-            <h3>Machine Learning Intern — OctaZen Software Solutions Pvt. Ltd.</h3>
-            <p class="card-subtitle">Hyderabad, India · May 2022 – Jun 2022</p>
-            <ul class="clean-list">
-              <li>Built end-to-end ML pipelines for air quality prediction, including data preprocessing, feature engineering, model training, and evaluation.</li>
-              <li>Developed a Python-based air quality prediction system using Scikit-learn and Pandas to forecast India’s AQI from historical pollutant data.</li>
-              <li>Preprocessed and analyzed pollutant concentrations (SO₂, NO₂, RSPM, SPM) to support accurate AQI modeling and improve signal-to-noise ratio.</li>
-              <li>Implemented and tuned regression models (Random Forest, Gradient Boosting, Linear Regression), achieving strong predictive performance (R² ≈ 0.97).</li>
-              <li>Designed the system to support scalable region-level AQI forecasting (states, cities, local regions) and communicated findings through visual reports.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">Python 🐍</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Regression</span>
-              <span class="tag">Data Cleaning</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Capstone Project Lead — AI Research / Medical Imaging</h3>
-            <p class="card-subtitle">Yeshiva University · New York, USA · Aug 2025 – Dec 2025</p>
-            <ul class="clean-list">
-              <li>Led a multidisciplinary research team focused on AI-based radiotherapy dose prediction for head and neck cancer patients.</li>
-              <li>Designed and experimented with diffusion-based and Mamba-inspired architectures (DoseDiff, CT Mamba) for 3D dose prediction using CT and structure masks.</li>
-              <li>Managed project execution: dataset curation, preprocessing pipelines, training workflows, model benchmarking, and evaluation using clinical dose and DVH metrics.</li>
-              <li>Collaborated closely with faculty advisors to refine the research problem, troubleshoot training instabilities, and iterate on model design and loss functions.</li>
-              <li>Developed visualizations for dose maps and clinical structures to support interpretability and potential integration into radiotherapy planning workflows.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">PyTorch</span>
-              <span class="tag">Diffusion Models</span>
-              <span class="tag">MambaVision</span>
-              <span class="tag">3D Medical Imaging</span>
-              <span class="tag">DVH Metrics</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS (SECOND) -->
-    <section class="section" id="projects">
-      <div class="container">
-        <h2 class="section-title">🚀 Projects</h2>
-
-        <div class="card-grid">
-
-          <!-- Dose Prediction Project -->
-          <div class="card">
-            <h3>Dose Prediction in Radiotherapy for Head &amp; Neck Using AI</h3>
-            <p class="card-subtitle">PyTorch · Diffusion Models · Medical Imaging</p>
-            <ul class="clean-list">
-              <li>Extended the DoseDiff diffusion model to predict full 3D dose distributions for the OpenKBP dataset, conditioning on CT scans and organ-at-risk structures.</li>
-              <li>Integrated distance-to-target and anatomical priors into the model to make dose predictions more clinically realistic and structure-aware.</li>
-              <li>Built a CT Mamba hybrid architecture that uses Mamba-based sequence modeling to better capture long-range spatial dependencies across slices.</li>
-              <li>Refined noise schedules, sampling steps, and loss functions (including DVH-based components) to improve stability, convergence, and dose accuracy.</li>
-              <li>Evaluated models using voxel-wise dose error, D98 / D95 / D2 metrics, and DVH curves, and generated visual overlays to compare predicted vs. ground-truth dose.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">PyTorch</span>
-              <span class="tag">DoseDiff</span>
-              <span class="tag">CT Mamba</span>
-              <span class="tag">OpenKBP</span>
-              <span class="tag">3D Volumetric Data</span>
-            </div>
-          </div>
-
-          <!-- Research Paper Summarizer -->
-          <div class="card">
-            <h3>Research Paper Summarizer &amp; Reviewer</h3>
-            <p class="card-subtitle">Transformers · FastAPI · Hugging Face · LangChain</p>
-            <ul class="clean-list">
-              <li>Developed a pipeline that retrieves research papers, extracts text from PDFs, and generates concise section-wise summaries using transformer-based seq2seq models.</li>
-              <li>Designed a FastAPI backend with endpoints for uploading PDFs, specifying target domains, and returning structured JSON outputs for summaries and key insights.</li>
-              <li>Implemented chunking strategies for long documents, preserving section boundaries (abstract, methods, results, discussion) to improve summary coherence.</li>
-              <li>Added paraphrasing and tone-control modes to adapt outputs for slide decks, emails, or technical writeups, and integrated basic “review-style” critique generation.</li>
-              <li>Experimented with different Hugging Face models and prompt templates to balance latency, summary quality, and domain specificity.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">Hugging Face 🤗</span>
-              <span class="tag">Transformers</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">NLP</span>
-            </div>
-          </div>
-
-          <!-- Brain Tumor Segmentation -->
-          <div class="card">
-            <h3>Semantic Segmentation of Brain Tumors in MRI Scans</h3>
-            <p class="card-subtitle">Deep Learning · U-Net · Medical Imaging</p>
-            <ul class="clean-list">
-              <li>Implemented U-Net architectures for pixel-level segmentation of brain tumors using multi-modal MRI scans (T1, T2, FLAIR).</li>
-              <li>Built preprocessing pipelines for normalization, slice extraction, and augmentation (flips, rotations, intensity shifts) to increase robustness.</li>
-              <li>Tracked performance using Dice coefficient and IoU, and iterated on network depth, skip connections, and post-processing to minimize false positives.</li>
-              <li>Generated visual overlays of predicted masks on MRI slices to help clinicians quickly interpret model outputs.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">U-Net</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Dice / IoU</span>
-              <span class="tag">MRI</span>
-            </div>
-          </div>
-
-          <!-- Dog Heart Classification -->
-          <div class="card">
-            <h3>Dog Heart Image Classification</h3>
-            <p class="card-subtitle">CNN · Deep Learning · Veterinary Imaging</p>
-            <ul class="clean-list">
-              <li>Built CNN-based classifiers to categorize canine heart radiographs into normal vs. enlarged cardiac size categories.</li>
-              <li>Used resizing, normalization, and augmentation to handle variations in x-ray quality and orientation.</li>
-              <li>Analyzed confusion matrices and misclassified cases to understand failure modes and guide data balancing.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">CNNs</span>
-              <span class="tag">Keras / TensorFlow</span>
-              <span class="tag">Image Augmentation</span>
-            </div>
-          </div>
-
-          <!-- Bird Sound Segmentation -->
-          <div class="card">
-            <h3>Bird Sound Image Segmentation Using U-Net</h3>
-            <p class="card-subtitle">Computer Vision for Audio · Spectrograms · U-Net</p>
-            <ul class="clean-list">
-              <li>Converted bird audio recordings into spectrogram images and trained U-Net models to localize regions containing bird vocalizations.</li>
-              <li>Compared different spectrogram representations (mel, log-mel) and augmentation strategies to improve robustness to background noise.</li>
-              <li>Demonstrated that segmentation-based approaches outperform simple thresholding in isolating signal-dense regions in noisy soundscapes.</li>
-            </ul>
-
-            <div class="tech-tags">
-              <span class="tag">Spectrograms</span>
-              <span class="tag">U-Net</span>
-              <span class="tag">Audio → Vision</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS (THIRD) -->
-    <section class="section" id="skills">
-      <div class="container">
-        <h2 class="section-title">🧠 Technical Skills</h2>
-
-        <div class="skills-group">
-          <h3>Programming Languages</h3>
-          <div class="skills-row">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-          </div>
-        </div>
-
-        <div class="skills-group">
-          <h3>AI / ML</h3>
-          <div class="skills-row">
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">Deep Learning</span>
-            <span class="skill-tag">Generative AI</span>
-            <span class="skill-tag">Diffusion Models</span>
-            <span class="skill-tag">LLMs</span>
-            <span class="skill-tag">Model Fine-tuning</span>
-            <span class="skill-tag">RAG Pipelines</span>
-            <span class="skill-tag">NLP</span>
-            <span class="skill-tag">Computer Vision</span>
-            <span class="skill-tag">Prompt Engineering</span>
-          </div>
-        </div>
-
-        <div class="skills-group">
-          <h3>Libraries &amp; Frameworks</h3>
-          <div class="skills-row">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">Scikit-learn</span>
-            <span class="skill-tag">Hugging Face</span>
-            <span class="skill-tag">LangChain</span>
-            <span class="skill-tag">FastAPI</span>
-          </div>
-        </div>
-
-        <div class="skills-group">
-          <h3>Tools &amp; Analytics</h3>
-          <div class="skills-row">
-            <span class="skill-tag">Jupyter</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">MLflow</span>
-            <span class="skill-tag">Excel</span>
-          </div>
-        </div>
-
-        <div class="skills-group">
-          <h3>Cloud &amp; Databases</h3>
-          <div class="skills-row">
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">ETL Pipelines</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS (LAST SECTION BEFORE RESUME) -->
-    <section class="section" id="certifications">
-      <div class="container">
-        <h2 class="section-title">📜 Certifications</h2>
-        <ul class="clean-list">
-          <li>✅ AWS Certified Machine Learning Engineer – Associate</li>
-          <li>✅ Hugging Face — Transformers &amp; NLP</li>
-          <li>✅ SQL — HackerRank</li>
-          <li>✅ Problem Solving — HackerRank</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- RESUME SECTION -->
-    <section class="section" id="resume">
-      <div class="container">
-        <h2 class="section-title">📄 Resume</h2>
-        <p>
-          You can view my full resume with detailed experience, projects, and skills here:
-        </p>
-        <a
-          class="btn btn-primary"
-          href="YOUR_GOOGLE_DRIVE_RESUME_LINK_HERE"
-          target="_blank"
-        >
-          🔗 View My Resume
+        <!-- 🔹 Resume button in HERO (your Drive link) -->
+        <a class="btn btn-outline"
+           href="https://drive.google.com/file/d/1fxrEP1DpUbEnzXlh2QanDSJ1_9rveEtW/view?usp=drive_link"
+           target="_blank">
+          📄 View Resume
         </a>
       </div>
-    </section>
 
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <p>© 2025 • Portfolio of Akshitha Baira</p>
-      <p>📍 New York, USA •
-        <a href="mailto:bairaakshitha@gmail.com">bairaakshitha@gmail.com</a>
-      </p>
+      <div class="hero-contact">
+        <p>
+          📍 New York, USA · 📞 (+1) 203-901-7300 ·
+          📧 <a href="mailto:bairaakshitha@gmail.com">bairaakshitha@gmail.com</a>
+        </p>
+        <p>
+          🔗
+          <a href="#" target="_blank">LinkedIn</a> ·
+          <a href="#" target="_blank">Personal Website</a> ·
+          <!-- ResearchGate instead of GitHub -->
+          <a href="#" target="_blank">ResearchGate</a>
+        </p>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- 1️⃣ WORK EXPERIENCE -->
+  <section class="section" id="work-experience">
+    <div class="container">
+      <h2 class="section-title">Work Experience</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Machine Learning Intern — Octagen Software Solutions Pvt. Ltd.</h3>
+          <p class="card-subtitle">Hyderabad, India · May 2022 – June 2022</p>
+          <ul class="clean-list">
+            <li>Built end-to-end ML pipelines for air quality prediction, including data preprocessing, feature engineering, model training, and evaluation.</li>
+            <li>Developed a Python-based air quality prediction system (Scikit-learn, Pandas) to forecast India’s AQI using historical pollutant data.</li>
+            <li>Preprocessed and analyzed pollutant concentrations (SO₂, NO₂, RSPM, SPM) to support accurate AQI modeling and regional policy decisions.</li>
+            <li>Implemented and evaluated regression models, achieving strong predictive performance (R² ≈ 0.97) for AQI prediction.</li>
+            <li>Designed the system to support state- and city-level AQI forecasting, enabling scalable deployment to multiple regions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Capstone Project Lead (AI Research / Medical Imaging) — Yeshiva University</h3>
+          <p class="card-subtitle">New York, USA · Aug 2025 – Dec 2025</p>
+          <ul class="clean-list">
+            <li>Led a multidisciplinary team building AI models for medical imaging and radiotherapy dose prediction for head and neck cancer patients.</li>
+            <li>Designed and experimented with diffusion-based and Mamba-inspired architectures (DoseDiff, CT Mamba) for 3D dose prediction on the OpenKBP dataset.</li>
+            <li>Managed project execution end-to-end: data preprocessing, training workflows, experiment tracking, and performance benchmarking using dose and DVH metrics.</li>
+            <li>Collaborated closely with faculty and teammates to refine research direction, troubleshoot model failures, and improve clinical relevance of predictions.</li>
+            <li>Presented results, ablation studies, and visualizations to academic audiences, highlighting trade-offs between model complexity, stability, and accuracy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2️⃣ EDUCATION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <ul class="clean-list">
+        <li>
+          <strong>Master of Science in Artificial Intelligence</strong> — Yeshiva University, New York, USA<br/>
+          <span class="edu-dates">Jan 2024 – Dec 2025</span>
+        </li>
+        <li>
+          <strong>Bachelor of Technology in Computer Science</strong> — Mahatma Gandhi University, India<br/>
+          <span class="edu-dates">Aug 2019 – May 2023</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3️⃣ PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Highlighted Projects</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Dose Prediction in Radiotherapy for Head &amp; Neck Using AI</h3>
+          <p class="card-subtitle">
+            🧠 PyTorch · 🌫 Diffusion Models · 🩻 Medical Imaging
+          </p>
+          <ul class="clean-list">
+            <li>Extended the DoseDiff diffusion model for 3D radiotherapy dose prediction on the OpenKBP dataset using distance-aware conditioning and organ-at-risk structures.</li>
+            <li>Developed a CT Mamba hybrid architecture that combines convolutional encoders with Mamba-based sequence modeling, improving dose error and DVH consistency across organs.</li>
+            <li>Refined noise schedules, denoising steps, and loss functions (e.g., voxel-wise dose loss + DVH-based penalties) to enhance accuracy, stability, and robustness to anatomical variations.</li>
+            <li>Implemented training workflows with experiment tracking, checkpointing, and visualization of dose distributions for better interpretability and clinical validation.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Research Paper Summarizer</h3>
+          <p class="card-subtitle">
+            📚 Transformers · ⚡ FastAPI · 🤗 Hugging Face
+          </p>
+          <ul class="clean-list">
+            <li>Built a multi-document summarization pipeline that retrieves research papers, chunks long content, and generates concise, domain-specific summaries using transformer-based seq2seq models.</li>
+            <li>Designed FastAPI endpoints to accept PDFs and raw text, providing an end-to-end workflow from document upload to cleaned, structured summaries.</li>
+            <li>Added paraphrasing, tone-control (formal, presentation-ready, or email-style), and length constraints to adapt outputs to different academic and professional use cases.</li>
+            <li>Explored integration with RAG-style retrieval, enabling targeted summarization for specific sections such as methods, results, and limitations.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Semantic Segmentation of Brain Tumors in MRI Scans</h3>
+          <p class="card-subtitle">
+            🧬 Deep Learning · 🧠 U-Net · 🩻 Medical Imaging
+          </p>
+          <ul class="clean-list">
+            <li>Developed U-Net-based architectures for pixel-level segmentation of brain tumors using MRI scans, focusing on accurate delineation of tumor boundaries.</li>
+            <li>Implemented preprocessing steps such as intensity normalization, data augmentation, and slice extraction to improve generalization and reduce overfitting.</li>
+            <li>Evaluated models using Dice score and IoU, and iteratively tuned hyperparameters, augmentations, and loss functions to boost segmentation quality.</li>
+            <li>Demonstrated potential to reduce manual annotation time and improve consistency in clinical tumor delineation workflows.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Dog Heart Image Classification</h3>
+          <p class="card-subtitle">
+            🐶 CNN · ❤️ Veterinary Imaging
+          </p>
+          <ul class="clean-list">
+            <li>Developed CNN models to classify canine heart images and detect cardiac size variations indicative of potential heart issues.</li>
+            <li>Preprocessed radiograph data via resizing, normalization, and augmentation to handle variability in acquisition settings and image quality.</li>
+            <li>Optimized model architecture and training pipeline to achieve reliable classification performance supporting veterinary cardiac diagnosis workflows.</li>
+            <li>Explored explainability methods (e.g., Grad-CAM) to visualize which regions of the heart image influenced model predictions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Bird Sound Image Segmentation Using U-Net</h3>
+          <p class="card-subtitle">
+            🎵 Audio-to-Image · 🌿 U-Net · 🐦 Bioacoustics
+          </p>
+          <ul class="clean-list">
+            <li>Converted bird audio recordings into spectrogram images and trained U-Net models to localize regions corresponding to bird vocalizations.</li>
+            <li>Experimented with different spectrogram representations (Mel, log-Mel, etc.) and augmentations (time masking, frequency masking) to improve robustness to background noise.</li>
+            <li>Compared segmentation-based approaches against simple thresholding and showed superior performance in isolating bird activity regions.</li>
+            <li>Demonstrated how this approach can support ecological monitoring, automated species detection, and large-scale audio analysis pipelines.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4️⃣ TECHNICAL SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <!-- You can give each group / tag its own color class in styles.css -->
+
+      <div class="skills-group">
+        <h3>🧠 Programming Languages</h3>
+        <div class="skills-row">
+          <span class="skill-tag skill-blue">Python</span>
+          <span class="skill-tag skill-green">SQL</span>
+          <span class="skill-tag skill-orange">C</span>
+          <span class="skill-tag skill-purple">C++</span>
+          <span class="skill-tag skill-teal">Java</span>
+          <span class="skill-tag skill-pink">JavaScript</span>
+          <span class="skill-tag skill-yellow">HTML</span>
+          <span class="skill-tag skill-red">CSS</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>🤖 AI / ML</h3>
+        <div class="skills-row">
+          <span class="skill-tag skill-blue">Machine Learning</span>
+          <span class="skill-tag skill-green">Deep Learning</span>
+          <span class="skill-tag skill-purple">Generative AI</span>
+          <span class="skill-tag skill-teal">LLMs</span>
+          <span class="skill-tag skill-pink">Model Fine-tuning</span>
+          <span class="skill-tag skill-yellow">RAG Pipelines</span>
+          <span class="skill-tag skill-orange">NLP</span>
+          <span class="skill-tag skill-red">Computer Vision</span>
+          <span class="skill-tag skill-green">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>⚙️ Libraries & Frameworks</h3>
+        <div class="skills-row">
+          <span class="skill-tag skill-purple">PyTorch</span>
+          <span class="skill-tag skill-orange">TensorFlow</span>
+          <span class="skill-tag skill-teal">Scikit-learn</span>
+          <span class="skill-tag skill-pink">Hugging Face</span>
+          <span class="skill-tag skill-blue">LangChain</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>🛠 Tools & Analytics</h3>
+        <div class="skills-row">
+          <span class="skill-tag skill-yellow">Excel</span>
+          <span class="skill-tag skill-green">Jupyter</span>
+          <span class="skill-tag skill-blue">Git</span>
+          <span class="skill-tag skill-purple">VS Code</span>
+          <span class="skill-tag skill-orange">Docker</span>
+          <span class="skill-tag skill-teal">FastAPI</span>
+          <span class="skill-tag skill-pink">MLflow</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h3>☁️ Cloud & Databases</h3>
+        <div class="skills-row">
+          <span class="skill-tag skill-blue">AWS</span>
+          <span class="skill-tag skill-green">MySQL</span>
+          <span class="skill-tag skill-purple">PostgreSQL</span>
+          <span class="skill-tag skill-orange">MongoDB</span>
+          <span class="skill-tag skill-teal">ETL Pipelines</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5️⃣ CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="clean-list">
+        <li>🏅 AWS Certified Machine Learning Engineer – Associate</li>
+        <li>📘 Hugging Face — Transformers &amp; NLP</li>
+        <li>🧩 SQL — HackerRank</li>
+        <li>🧠 Problem Solving — HackerRank</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© 2025 • Portfolio of Akshitha Baira</p>
+    <p>📍 New York, USA • <a href="mailto:bairaakshitha@gmail.com">bairaakshitha@gmail.com</a></p>
+  </div>
+</footer>
 
 </div>
 
